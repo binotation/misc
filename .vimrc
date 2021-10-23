@@ -9,7 +9,6 @@ set expandtab
 set autoindent
 set shiftwidth=4
 filetype indent on
-set colorcolumn=80
 highlight ColorColumn ctermbg=8 guibg=lightgrey
 set number
 set wildmenu
