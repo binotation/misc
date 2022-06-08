@@ -1,6 +1,6 @@
 ```
 tar -czf <file.tar.gz> <directory>
-tar -xf <archive.tar> -C </output/dir>
+tar -xzf <archive.tar.gz> -C </output/dir>
 ```
 
 ```
