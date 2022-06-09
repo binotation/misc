@@ -8,4 +8,3 @@ filetype indent on
 set colorcolumn=100
 highlight ColorColumn ctermbg=8 guibg=lightgrey
 set wildmenu
-set cursorline
