@@ -5,3 +5,5 @@
 	editor = vi
 [remote "origin"]
 	prune = true
+[pull]
+	ff = only
