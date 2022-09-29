@@ -5,3 +5,5 @@
 `git config --global core.editor "vi"`
 
 `ssh-keygen -t ed25519 -C '68807919+binotation@users.noreply.github.com'`
+
+`git push origin --delete <branch>`
