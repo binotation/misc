@@ -1,6 +1,8 @@
 Initial terminal size: 80 43
 
-Custom font: Liberation Mono
+Regular font: Sans Regular 11
+
+Monospace font: Liberation Mono Regular 11
 
 ### Palette based off Rxvt
 Color 0: 000000

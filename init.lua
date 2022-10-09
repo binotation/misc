@@ -1,3 +1,4 @@
+-- $HOME/.config/nvim/init.lua
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
