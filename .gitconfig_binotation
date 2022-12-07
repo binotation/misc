@@ -1,0 +1,5 @@
+[user]
+	email = 68807919+binotation@users.noreply.github.com
+	name = binotation
+[core]
+	sshCommand = "ssh -i ~/.ssh/binotation"

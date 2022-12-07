@@ -1,8 +1,9 @@
-[user]
-	email = 68807919+binotation@users.noreply.github.com
-	name = binotation
+[includeIf "gitdir:~/repos/binotation/"]
+	path = ~/repos/binotation/.gitconfig
+[includeIf "gitdir:~/repos/god-is-a-crab/"]
+	path = ~/repos/god-is-a-crab/.gitconfig
 [core]
-	editor = vi
+	editor = nvim
 [remote "origin"]
 	prune = true
 [pull]
