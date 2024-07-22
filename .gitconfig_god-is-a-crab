@@ -1,0 +1,5 @@
+[user]
+	email = ni.jingwei.2210@gmail.com
+	name = god-is-a-crab
+[core]
+	sshCommand = "ssh -i ~/.ssh/god-is-a-crab"
