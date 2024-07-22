@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 cd
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get install -y git ssh fzf curl cmake pkg-config python3-dev gcc-arm-none-eabi ninja-build \
+sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install -y git ssh fzf cmake pkg-config python3-dev gcc-arm-none-eabi ninja-build \
     gettext unzip build-essential can-utils xz-utils python3-virtualenv
 mkdir repos && cd repos
 mkdir binotation god-is-a-crab
