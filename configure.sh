@@ -4,7 +4,8 @@ cd
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake pkg-config python3-dev gcc-arm-none-eabi \
-    unzip build-essential can-utils xz-utils python3-virtualenv gdb-multiarch openocd
+    unzip build-essential can-utils xz-utils python3-virtualenv gdb-multiarch openocd \
+	automake autoconf libtool texinfo libusb-1.0-0
 mkdir repos && cd repos
 mkdir binotation god-is-a-crab
 git clone https://github.com/binotation/misc.git
