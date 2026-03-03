@@ -5,7 +5,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake pkg-config python3-dev gcc-arm-none-eabi \
     unzip curl build-essential can-utils xz-utils python3-venv gdb-multiarch \
-	automake autoconf libtool texinfo libusb-1.0-0
+	automake autoconf libtool texinfo libusb-1.0-0 flatpak
 mkdir repos && cd repos
 mkdir binotation god-is-a-crab
 git clone https://github.com/binotation/misc.git
@@ -32,3 +32,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo 'eval "$(zoxide init --cmd cd bash)"' >> "$HOME"/.bashrc
+
+# Install keepassxc
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user flathub org.keepassxc.KeePassXC
+
