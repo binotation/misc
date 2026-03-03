@@ -17,6 +17,8 @@ cp misc/.gitconfig "$HOME"
 cp misc/.gitconfig_binotation binotation/
 cp misc/.gitconfig_god-is-a-crab god-is-a-crab/
 mkdir -p "$HOME"/.ssh
+ssh-keygen -t ed25519 -f "$HOME"/.ssh/binotation -N ''
+ssh-keygen -t ed25519 -f "$HOME"/.ssh/god-is-a-crab -N ''
 
 # Install Neovim
 mkdir -p "$HOME"/.config/nvim
