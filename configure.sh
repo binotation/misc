@@ -4,11 +4,13 @@ cd
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-none-eabi \
-    unzip curl build-essential can-utils xz-utils python3-venv gdb-multiarch \
+    unzip curl build-essential can-utils xz-utils python3-venv python3-pip gdb-multiarch \
 	automake autoconf libtool texinfo libusb-1.0-0 flatpak libglu1-mesa
 mkdir opt repos && cd repos
 mkdir binotation god-is-a-crab
 git clone https://github.com/binotation/misc.git
+
+pip3 install cmsis-svd==0.5 --break-system-packages
 
 # Set up git
 cp misc/.gitconfig "$HOME"
@@ -28,6 +30,7 @@ echo 'alias vi=nvim' >> "$HOME"/.bashrc
 
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add thumbv7em-none-eabihf
 
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
