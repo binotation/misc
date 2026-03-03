@@ -5,7 +5,8 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-none-eabi \
     unzip curl build-essential can-utils xz-utils python3-venv python3-pip gdb-multiarch \
-	automake autoconf libtool texinfo libusb-1.0-0 flatpak libglu1-mesa
+	automake autoconf libtool texinfo libusb-1.0-0 flatpak libglu1-mesa clang ninja-build \
+    libgtk-3-dev stlink-tools
 mkdir opt repos && cd repos
 mkdir binotation god-is-a-crab
 git clone https://github.com/binotation/misc.git
@@ -57,3 +58,6 @@ cd $HOME/Downloads
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.41.3-stable.tar.xz
 tar xJf flutter_linux_3.41.3-stable.tar.xz -C $HOME/opt
 # add to path
+
+# claude code
+curl -fsSL https://claude.ai/install.sh | bash
