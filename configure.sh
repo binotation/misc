@@ -3,7 +3,7 @@
 cd
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install -y git ssh fzf cmake pkg-config python3-dev gcc-arm-none-eabi \
+sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-none-eabi \
     unzip curl build-essential can-utils xz-utils python3-venv gdb-multiarch \
 	automake autoconf libtool texinfo libusb-1.0-0 flatpak
 mkdir repos && cd repos
@@ -37,3 +37,18 @@ echo 'eval "$(zoxide init --cmd cd bash)"' >> "$HOME"/.bashrc
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install --user flathub org.keepassxc.KeePassXC
 
+# Install OpenOCD STM
+cd $HOME/repos
+git clone --recursive https://github.com/STMicroelectronics/OpenOCD.git
+cd OpenOCD
+git checkout -b v0.12.0 v0.12.0
+./bootstrap
+./configure
+make -j$(nproc)
+sudo make install
+sudo cp contrib/60-openocd.rules /etc/udev/rules.d/
+
+cd $HOME/Downloads
+wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.41.3-stable.tar.xz
+tar xJf flutter_linux_3.41.3-stable.tar.xz -C $HOME/opt
+# add to path
