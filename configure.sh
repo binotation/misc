@@ -4,7 +4,7 @@ cd
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake pkg-config python3-dev gcc-arm-none-eabi \
-    unzip build-essential can-utils xz-utils python3-virtualenv gdb-multiarch openocd \
+    unzip curl build-essential can-utils xz-utils python3-venv gdb-multiarch \
 	automake autoconf libtool texinfo libusb-1.0-0
 mkdir repos && cd repos
 mkdir binotation god-is-a-crab
@@ -15,15 +15,13 @@ cp misc/.gitconfig "$HOME"
 cp misc/.gitconfig_binotation binotation/
 cp misc/.gitconfig_god-is-a-crab god-is-a-crab/
 mkdir -p "$HOME"/.ssh
-ssh-keygen -t ed25519 -f "$HOME"/.ssh/binotation -N ''
-ssh-keygen -t ed25519 -f "$HOME"/.ssh/god-is-a-crab -N ''
 
 # Install Neovim
 mkdir -p "$HOME"/.config/nvim
 cp misc/init.lua "$HOME"/.config/nvim
 mkdir -p "$HOME"/.local/bin
 echo 'export PATH="$PATH":"$HOME"/.local/bin' >> "$HOME"/.bashrc
-(mkdir -p "$HOME"/Downloads && cd "$HOME"/Downloads && curl -OL https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.tar.gz && tar xzf nvim-linux-x86_64.tar.gz && cp -r nvim-linux-x86_64/* "$HOME"/.local)
+(mkdir -p "$HOME"/Downloads && cd "$HOME"/Downloads && curl -OL https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.tar.gz && tar xzf nvim-linux-x86_64.tar.gz && cp -r nvim-linux-x86_64/* "$HOME"/.local)
 git clone --depth=1 https://github.com/savq/paq-nvim.git \
     "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
 echo 'alias vi=nvim' >> "$HOME"/.bashrc
