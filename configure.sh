@@ -6,7 +6,9 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-none-eabi \
     unzip curl build-essential can-utils xz-utils python3-venv python3-pip gdb-multiarch \
 	automake autoconf libtool texinfo libusb-1.0-0 flatpak libglu1-mesa clang ninja-build \
-    libgtk-3-dev stlink-tools
+    libgtk-3-dev stlink-tools wget flex bison gperf ccache libffi-dev libssl-dev dfu-util \
+    libgcrypt20 libglib2.0-0 libpixman-1-0 libsdl2-2.0-0 libslirp0
+sudo snap install --classic tio
 mkdir opt repos && cd repos
 mkdir binotation god-is-a-crab
 git clone https://github.com/binotation/misc.git
@@ -57,7 +59,16 @@ sudo cp contrib/60-openocd.rules /etc/udev/rules.d/
 cd $HOME/Downloads
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.41.3-stable.tar.xz
 tar xJf flutter_linux_3.41.3-stable.tar.xz -C $HOME/opt
-# add to path
+sed -i '/^export PATH=/ s|$|:"$HOME"/opt/flutter/bin|' $HOME/.bashrc
+
+# esp-idf
+echo "deb [trusted=yes] https://dl.espressif.com/dl/eim/apt/ stable main" | sudo tee /etc/apt/sources.list.d/espressif.list
+sudo apt update
+sudo apt install -y eim
+eim install
+sudo usermod -aG dialout $USER
 
 # claude code
 curl -fsSL https://claude.ai/install.sh | bash
+
+# Obsidian
