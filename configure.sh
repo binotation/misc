@@ -7,7 +7,7 @@ sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-no
     unzip curl build-essential can-utils xz-utils python3-venv python3-pip gdb-multiarch \
 	automake autoconf libtool texinfo libusb-1.0-0 flatpak libglu1-mesa clang ninja-build \
     libgtk-3-dev stlink-tools wget flex bison gperf ccache libffi-dev libssl-dev dfu-util \
-    libgcrypt20 libglib2.0-0 libpixman-1-0 libsdl2-2.0-0 libslirp0
+    libgcrypt20 libglib2.0-0 libpixman-1-0 libsdl2-2.0-0 libslirp0 ruby-full ruby-bundler
 sudo snap install --classic tio
 mkdir opt repos && cd repos
 mkdir binotation god-is-a-crab
