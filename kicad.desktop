@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=KiCad
+Comment=EDA Suite
+Exec=/home/jw/opt/kicad-9.0.7-1-x86_64.AppImage
+Icon=kicad
+Terminal=false
+Type=Application
+Categories=Engineering;Science;

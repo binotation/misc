@@ -56,6 +56,7 @@ make -j$(nproc)
 sudo make install
 sudo cp contrib/60-openocd.rules /etc/udev/rules.d/
 
+# Flutter
 cd $HOME/Downloads
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.41.3-stable.tar.xz
 tar xJf flutter_linux_3.41.3-stable.tar.xz -C $HOME/opt
@@ -72,3 +73,13 @@ sudo usermod -aG dialout $USER
 curl -fsSL https://claude.ai/install.sh | bash
 
 # Obsidian
+
+# Kicad
+cd $HOME/opt
+wget https://mirror.aarnet.edu.au/pub/kicad/appimage/stable/kicad-9.0.7-1-x86_64.AppImage
+./kicad-9.0.7-1-x86_64.AppImage --appimage-extract
+cp -r squashfs-root/usr/share/icons/hicolor/ ~/.local/share/icons/
+rm -r squashfs-root/
+cp $HOME/repos/misc/kicad.desktop $HOME/.local/share/applications/
+
+# salae logic 2
