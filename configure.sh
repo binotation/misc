@@ -10,7 +10,7 @@ sudo apt-get install -y git ssh fzf cmake make pkg-config python3-dev gcc-arm-no
     libgcrypt20 libglib2.0-0 libpixman-1-0 libsdl2-2.0-0 libslirp0 ruby-full ruby-bundler
 sudo snap install --classic tio
 mkdir opt repos && cd repos
-mkdir binotation god-is-a-crab
+mkdir binotation ghostfuse
 git clone https://github.com/binotation/misc.git
 
 pip3 install cmsis-svd==0.5 --break-system-packages
@@ -18,10 +18,10 @@ pip3 install cmsis-svd==0.5 --break-system-packages
 # Set up git
 cp misc/.gitconfig "$HOME"
 cp misc/.gitconfig_binotation binotation/
-cp misc/.gitconfig_god-is-a-crab god-is-a-crab/
+cp misc/.gitconfig_ghostfuse ghostfuse/
 mkdir -p "$HOME"/.ssh
 ssh-keygen -t ed25519 -f "$HOME"/.ssh/binotation -N ''
-ssh-keygen -t ed25519 -f "$HOME"/.ssh/god-is-a-crab -N ''
+ssh-keygen -t ed25519 -f "$HOME"/.ssh/ghostfuse -N ''
 
 # Install Neovim
 mkdir -p "$HOME"/.config/nvim
