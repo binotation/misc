@@ -1,7 +1,7 @@
 [includeIf "gitdir:~/repos/binotation/"]
 	path = ~/repos/binotation/.gitconfig_binotation
-[includeIf "gitdir:~/repos/ghostfuse/"]
-	path = ~/repos/ghostfuse/.gitconfig_ghostfuse
+[includeIf "gitdir:~/repos/ghostlink0/"]
+	path = ~/repos/ghostlink0/.gitconfig_ghostlink0
 [core]
 	editor = nvim
 [remote "origin"]

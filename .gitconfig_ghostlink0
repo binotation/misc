@@ -1,0 +1,5 @@
+[user]
+	email = ni.jingwei.2210@gmail.com
+	name = ghostlink0
+[core]
+	sshCommand = "ssh -i ~/.ssh/ghostlink0"
